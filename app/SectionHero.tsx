@@ -53,7 +53,7 @@ export default function SectionHero(): JSX.Element {
             transition: { delay: 0.8, duration: 0.8 },
         },
         {
-            className: 'w-[192px] h-auto lg:w-[242px] lg:h-[202px] absolute bottom-8 -right-24 z-[1]',
+            className: 'w-[152px] h-auto lg:w-[242px] lg:h-[202px] absolute bottom-8 -right-16 md:-right-24 z-[1]',
             src: assets.home.hero.triangle,
             width: 242,
             height: 202,

@@ -85,7 +85,7 @@ export default function SectionLetsConnect() {
     ]
 
     return (
-        <section ref={ref} className={`safe-x-padding ${styles.sectionDistance} overflow-y-hidden lg:h-[1000px]`} aria-label="Let's Connect Section">
+        <section ref={ref} className={`safe-x-padding ${'my-[172px]'} overflow-y-hidden lg:h-[1000px]`} aria-label="Let's Connect Section">
             <div className='text-center'>
                 <motion.h2 initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5 }} className={styles.sectionTitle}>Let&apos;s Connect</motion.h2>
                 <motion.p initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.7 }} className={`${styles.sectionDescription} max-w-[730px] mx-auto`}>Do you have any questions or a project in mind? Let&apos;s connect! I am here to help and excited to hear from you. You can also take a look at my work.</motion.p>

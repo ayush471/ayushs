@@ -104,8 +104,22 @@ export default function SectionMyLatestProject() {
     return (
         <section ref={ref} className={`safe-x-padding ${styles.sectionDistance}`} aria-label='My Latest Project Section'>
             <div className='text-center'>
-                <motion.h2 initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5 }} className={styles.sectionTitle}>My Latest Project</motion.h2>
-                <motion.p initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.7 }} className={`${styles.sectionDescription} max-w-[706px] mx-auto`}>Take a look at something I&apos;ve worked on, such as a case study, real project, and more</motion.p>
+                <motion.h2
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={inView ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className={styles.sectionTitle}
+                >
+                    My Latest Project
+                </motion.h2>
+                <motion.p
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={inView ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.7 }}
+                    className={`${styles.sectionDescription} max-w-[706px] mx-auto`}
+                >
+                    Take a look at something I&apos;ve worked on, such as a case study, real project, and more.
+                </motion.p>
             </div>
             <div className='mt-[50px] h-full'>
                 <div className='flex flex-col items-center justify-center md:items-start md:flex-row gap-9'>
@@ -136,10 +150,13 @@ export default function SectionMyLatestProject() {
                                     style={{ height: 'auto' }}
                                 />
                                 <div className="absolute top-0 left-0 flex items-center justify-center w-full h-full transition-opacity duration-300 opacity-0 bg-gray/10 backdrop-blur-sm rounded-2xl md:rounded-[25px] hover:opacity-100 md:text-2xl">
-                                    <p className={`${activeTab === index ? 'text-white' : 'text-accent'} font-bold transition-colors duration-75 ease-in-out`}>{tab.name}</p>
+                                    <p
+                                        className={`${activeTab === index ? 'text-white' : 'text-accent'} font-bold transition-colors duration-75 ease-in-out`}
+                                    >
+                                        {tab.name}
+                                    </p>
                                 </div>
                             </motion.button>
-
                         ))}
                     </div>
                     <div className='overflow-hidden'>
@@ -150,7 +167,7 @@ export default function SectionMyLatestProject() {
                                         activeTab === tabIndex && (
                                             <motion.div
                                                 key={dataIndex.toString()}
-                                                className="relative col-span-12 overflow-hidden group xl:col-span-6"
+                                                className={`${dataIndex > 2 ? "hidden md:block" : ""} relative col-span-12 overflow-hidden group xl:col-span-6`}
                                                 initial={{ opacity: 0, x: -50 }}
                                                 animate={inView ? { opacity: 1, x: 0 } : {}}
                                                 transition={{ duration: 0.5 }}

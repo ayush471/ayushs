@@ -75,8 +75,22 @@ export default function SectionTechnologyStack() {
     return (
         <section ref={ref} className={`safe-x-padding ${styles.sectionDistance}`}>
             <div className='text-center'>
-                <motion.h2 initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5 }} className={styles.sectionTitle}>Technology Stack</motion.h2>
-                <motion.p initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.7 }} className={`${styles.sectionDescription} max-w-[960px] mx-auto`}>I are concerned about security and performance for my client. That&apos;s why I always keep updating and use best technologies in a product</motion.p>
+                <motion.h2
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={inView ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className={styles.sectionTitle}
+                >
+                    Technology Stack
+                </motion.h2>
+                <motion.p
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={inView ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.7 }}
+                    className={`${styles.sectionDescription} max-w-[960px] mx-auto`}
+                >
+                    I are concerned about security and performance for my client. That&apos;s why I always keep updating and use best technologies in a product.
+                </motion.p>
             </div>
             <div className='flex items-center justify-center mt-12'>
                 <div className='flex flex-row gap-[50px] max-w-[864px] flex-wrap justify-center items-center'>
@@ -84,9 +98,9 @@ export default function SectionTechnologyStack() {
                         <div key={index.toString()} className='relative h-full'>
                             <motion.div
                                 className="flex justify-center items-center w-[100px] h-[100px] transition-all duration-150 ease-in-out"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={inView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                initial={{ opacity: 0 }}
+                                animate={inView ? { opacity: 1 } : {}}
+                                transition={{ duration: 0.8, delay: index * 0.1 + 0.3 }}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
@@ -119,7 +133,7 @@ export default function SectionTechnologyStack() {
                         </div>
                     ))}
                 </div>
-            </div >
-        </section >
+            </div>
+        </section>
     )
 }

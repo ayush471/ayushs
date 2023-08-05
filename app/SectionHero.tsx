@@ -65,7 +65,7 @@ export default function SectionHero(): JSX.Element {
     ];
 
     return (
-        <section ref={ref} className='safe-x-padding mt-10 mb-[172px]' aria-label='Hero Section'>
+        <section ref={ref} className='safe-x-padding py-10' aria-label='Hero Section'>
             <div className='grid grid-flow-row gap-10 xl:grid-cols-2 xl:grid-flow-col xl:gap-0'>
                 {/* first */}
                 <div className='flex flex-col items-center justify-center order-2 xl:items-start xl:order-1'>

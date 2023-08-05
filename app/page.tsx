@@ -7,7 +7,7 @@ import SectionTechnologyStack from "./SectionTechnologyStack";
 
 export default function Home() {
   return (
-    <div className="safe-layout">
+    <div className="safe-layout snap-y snap-mandatory">
       <SectionHero />
       <SectionTechnologyStack />
       <SectionMyLatestProject />

@@ -62,7 +62,12 @@ export default function SectionQuote() {
     return (
         <section ref={ref} className={`safe-x-padding ${styles.sectionDistance}`} aria-label='Quote Section'>
             <div className='relative'>
-                <motion.p initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5 }} className={styles.creatorQuotes}>
+                <motion.p
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={inView ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className={styles.creatorQuotes}
+                >
                     This portfolio was made with heart and soul, pouring passion and creativity into every detail to bring it to life. It&apos;s not just a portfolio, it&apos;s a labor of love.
                 </motion.p>
 
@@ -70,7 +75,13 @@ export default function SectionQuote() {
                     <AnimatedImage key={index.toString()} {...item} />
                 ))}
             </div>
-            <motion.p initial={{ y: 100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ duration: 0.5, delay: 0.5 }} className={styles.creatorQuotesName} style={suarte.style}>
+            <motion.p
+                initial={{ y: 100, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className={styles.creatorQuotesName}
+                style={suarte.style}
+            >
                 Deri kurniawan
             </motion.p>
         </section >
